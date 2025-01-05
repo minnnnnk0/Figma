@@ -1,0 +1,18 @@
+:root {
+    /* Red Colors */
+    --global-red-01: #FF5252;
+    --global-red-02: #FF5252;
+    --global-red-03: #FFA6A6;
+    --global-red-04: #FFE6E6;
+  
+    /* Blue Colors */
+    --global-blue-01: #00BFFF;
+    --global-blue-02: #52D4FF;
+    --global-blue-03: #A3E8FF;
+    --global-blue-04: #E4F8FF;
+  
+    /* Font Sizes */
+    --global-font-size-small: 10;
+    --global-font-size-large: 14;
+  }
+  

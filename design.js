@@ -1,16 +1,24 @@
-const StyleDictionary = require('style-dictionary').extend({
-    source: ['**/*.json'],
-    platforms: {
-      css: {
-        transformGroup: 'token-studio',
-        buildPath: '', //변환한 파일을 저장할 경로 
-        files: [
-          {
-            destination: '', //파일명
-          },
-        ],
-      },
+import { registerTransforms } from "@tokens-studio/sd-transforms";
+import StyleDictionary from "style-dictionary";
+
+registerTransforms(StyleDictionary);
+
+const sd = new StyleDictionary({
+  source: ["/tokens.json"],
+  platforms: {
+    css: {
+      transformGroup: "tokens-studio",
+      transforms: ["example"],
+      buildPath: "/",
+      files: [
+        {
+          destination: "variables.css",
+          format: "css/variables",
+        },
+      ],
     },
-  });
-  
-  StyleDictionary.buildAllPlatforms();
+  },
+});
+
+sd.cleanAllPlatforms();
+sd.buildAllPlatforms();
